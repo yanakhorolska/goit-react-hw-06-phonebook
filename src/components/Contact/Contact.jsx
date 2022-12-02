@@ -1,6 +1,7 @@
-﻿import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import './Contact.css';
+import PropTypes from 'prop-types';
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -17,4 +18,8 @@ export const Contact = ({ contact }) => {
       </button>
     </div>
   );
+};
+
+Contact.propTypes = {
+  contact: PropTypes.object,
 };

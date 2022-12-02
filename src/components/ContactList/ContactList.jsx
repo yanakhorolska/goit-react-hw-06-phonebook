@@ -7,7 +7,6 @@ import { Contact } from 'components/Contact/Contact';
 const ContactList = () => {
   const contacts = useSelector(getContacts);
   const { input } = useSelector(getFilter);
-  console.log(contacts);
 
   if (!contacts) {
     return null;
@@ -30,6 +29,6 @@ const ContactList = () => {
 export default ContactList;
 
 ContactList.propTypes = {
-  contacts: PropTypes.array,
-  deleteContact: PropTypes.func,
+  contacts: PropTypes.object,
+  input: PropTypes.string,
 };
